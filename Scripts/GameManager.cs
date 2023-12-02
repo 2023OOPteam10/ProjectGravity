@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     bool isTimeChecked;
     bool isGreenGemChecked;
     bool isBlueGemChecked;
-    
-    public bool isDoorOpened;    // if all the keys are collected, the final door will be opened.
+
+    public static bool isDoorOpened;   // if all the keys are collected, the final door will be opened.
 
     [SerializeField] Timer timer;
 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9106796341501659187
+--- !u!1 &8455578031467991163
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9106796341501659192}
-  - component: {fileID: 9106796341501659191}
-  - component: {fileID: 9106796341501659190}
-  - component: {fileID: 9106796341501659188}
-  - component: {fileID: 9106796341501659193}
+  - component: {fileID: 8455578031467991159}
+  - component: {fileID: 8455578031467991160}
+  - component: {fileID: 8455578031467991161}
+  - component: {fileID: 8455578031467991162}
   m_Layer: 0
-  m_Name: Key
-  m_TagString: Untagged
+  m_Name: GreenGem
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9106796341501659192
+--- !u!4 &8455578031467991159
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106796341501659187}
+  m_GameObject: {fileID: 8455578031467991163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.23, y: 2.59, z: 0}
+  m_LocalPosition: {x: 2.64, y: -2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9106796341501659191
+--- !u!212 &8455578031467991160
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106796341501659187}
+  m_GameObject: {fileID: 8455578031467991163}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -865176534, guid: f4b29f9c447340f45a34cc5334c73855, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6c7cbf4dfa4f4b41bacd4a324f8ffe9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,25 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9106796341501659190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106796341501659187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96852218336474680b1f07d3677612c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &9106796341501659188
+--- !u!58 &8455578031467991161
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106796341501659187}
+  m_GameObject: {fileID: 8455578031467991163}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -114,24 +101,18 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
---- !u!95 &9106796341501659193
-Animator:
-  serializedVersion: 4
+  m_Radius: 0.5
+--- !u!114 &8455578031467991162
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106796341501659187}
+  m_GameObject: {fileID: 8455578031467991163}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd3f4d63cfeb1874ca5450fa7d21f081, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4212e79501f774cad3a53678c5c067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSkyBlue: 0
+  rotationSpeed: 0

@@ -11,6 +11,5 @@ public class Key : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.keyScore++;
         Debug.Log("Key Score: " + GameManager.keyScore);
-
     }
 }

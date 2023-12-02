@@ -2,39 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player2 : MonoBehaviour
+public class GreenPlayer : MonoBehaviour
 {
-    public Vector2 dir;
     public float speed_x;
     public float jumpAmount;
     public float speedAmount;
     public float maxSpeed;
     public Rigidbody2D rig;
+    SpriteRenderer spriteRenderer;
+    Animator animator;
+    bool isDying;
 
     // Start is called before the first frame update
     void Start()
     {
-        rig = gameObject.GetComponent<Rigidbody2D>();
+        rig = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         speed_x = 0;
+    }
+
+    private void OnEnable()
+    {
+        isDying = false;
+        rig.freezeRotation = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        dir = rig.velocity;
         move();
     }
 
     void move()
     {
+        if (isDying)
+        {
+            rig.freezeRotation = true;
+            rig.velocity = Vector2.zero;
+            return;
+        } 
+
         if(Input.GetKeyDown(KeyCode.RightShift)){
+            animator.SetTrigger("Jump");
             if(rig.velocity.y < 0.01 && rig.velocity.y > -0.01) rig.velocity = rig.velocity + new Vector2(0, jumpAmount);
         }
         else if(Input.GetKey(KeyCode.LeftArrow)){
+            spriteRenderer.flipX = true;
             if(speed_x > 0) speed_x = 0;
             else if(speed_x >= -maxSpeed) speed_x -= speedAmount;
         }
         else if(Input.GetKey(KeyCode.RightArrow)){
+            spriteRenderer.flipX = false;
             if(speed_x < 0) speed_x = 0;
             if(speed_x <= maxSpeed) speed_x += speedAmount;
         }
@@ -43,5 +62,16 @@ public class player2 : MonoBehaviour
         }
 
         rig.velocity = new Vector2(speed_x * Time.deltaTime, rig.velocity.y);
+    }
+    public void Die()
+    {
+        isDying = true;
+        animator.SetTrigger("Die");
+        Invoke("Disappear", 1.239f);
+    }
+
+    private void Disappear()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -8,7 +8,11 @@ public class DeadZone : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.gameObject.SetActive(false);
+            if (collision.GetComponent<BluePlayer>())
+                collision.GetComponent<BluePlayer>().Die();
+            else
+                collision.GetComponent<GreenPlayer>().Die();
+
             Debug.Log("Die");
         }
     }
