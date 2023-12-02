@@ -66,7 +66,7 @@ public class BluePlayer : MonoBehaviour
             speed_x = 0;
         }
 
-        rig.velocity = new Vector2(speed_x, rig.velocity.y) * Time.deltaTime;
+        rig.velocity = new Vector2(speed_x, rig.velocity.y);
     }
 
     public void Die()

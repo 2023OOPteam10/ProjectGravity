@@ -61,7 +61,7 @@ public class GreenPlayer : MonoBehaviour
             speed_x = 0;
         }
 
-        rig.velocity = new Vector2(speed_x * Time.deltaTime, rig.velocity.y);
+        rig.velocity = new Vector2(speed_x, rig.velocity.y);
     }
     public void Die()
     {

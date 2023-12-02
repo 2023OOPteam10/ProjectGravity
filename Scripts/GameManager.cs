@@ -7,10 +7,10 @@ public class GameManager : MonoBehaviour
     const int MAX_GREEN_GEM_SCORE = 3;    // the total number of existing gems
     const int MAX_BLUE_GEM_SCORE = 3;    // the total number of existing gems
     const int MAX_KEY_SCORE = 3;    // the total number of existing keys
-    const float TIME_LIMIT = 100.0f;    // the time limit of this game
+    const float TIME_LIMIT = 10.0f;    // the time limit of this game
 
     float elapsedTime;   // time elapsed from start time
-    static int finalScore;    // the final score of this game.
+    static int finalScore;  // the final score of this game.
 
     public static int keyScore;    // the number of keys collected by characters
     public static int greenGemScore;    // the number of green gems collected by green character
@@ -73,5 +73,10 @@ public class GameManager : MonoBehaviour
         if(keyScore == MAX_KEY_SCORE) {
             isDoorOpened = true;
         }
+    }
+
+    public static int GetFinalScore()
+    {
+        return finalScore;
     }
 }
