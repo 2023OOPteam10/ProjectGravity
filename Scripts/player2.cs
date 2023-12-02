@@ -24,7 +24,7 @@ public class player2 : MonoBehaviour
     void move()
     {
         if(Input.GetKeyDown(KeyCode.RightShift)){
-            if(rig.velocity.y == 0) rig.velocity = rig.velocity + new Vector2(0, (float)8);
+            if(rig.velocity.y < 0.01 && rig.velocity.y > -0.01) rig.velocity = rig.velocity + new Vector2(0, (float)8);
         }
         else if(Input.GetKey(KeyCode.LeftArrow)){
             if(speed_x > 0) speed_x = 0;

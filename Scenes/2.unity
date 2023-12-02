@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 661296236}
   m_Layer: 0
   m_Name: wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 1251487890}
   - component: {fileID: 1251487893}
   - component: {fileID: 1251487894}
+  - component: {fileID: 1251487896}
   - component: {fileID: 1251487895}
   m_Layer: 0
   m_Name: Circle
@@ -785,7 +786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_y: 0
   rig: {fileID: 0}
   jumped: 0
 --- !u!212 &1251487891
@@ -904,6 +904,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9447bc70df33b447d8795c97f734236e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1251487896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251487889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfa6131785754bdb855c856a594a738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2009960199
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +930,7 @@ GameObject:
   - component: {fileID: 2009960202}
   m_Layer: 0
   m_Name: wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,6 +1062,7 @@ GameObject:
   - component: {fileID: 2034241579}
   - component: {fileID: 2034241582}
   - component: {fileID: 2034241583}
+  - component: {fileID: 2034241584}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Player
@@ -1069,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84243c36f31634ce38a18e0516ecaf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed_x: 0
   rig: {fileID: 0}
 --- !u!212 &2034241580
 SpriteRenderer:
@@ -1131,8 +1144,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034241578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.32, y: 3.59, z: 0}
-  m_LocalScale: {x: 1.502484, y: 1.502484, z: 1.502484}
+  m_LocalPosition: {x: 4.96, y: -2.13, z: 0}
+  m_LocalScale: {x: 0.8742954, y: 0.8742954, z: 0.8742954}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1175,3 +1188,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!114 &2034241584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034241578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfa6131785754bdb855c856a594a738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

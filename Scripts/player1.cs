@@ -29,7 +29,7 @@ public class player1 : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftShift)){
             
-            if(rig.velocity.y == 0) {
+            if(rig.velocity.y < 0.01 && rig.velocity.y > -0.01) {
                 float grav = rig.gravityScale;
                 rig.gravityScale = -rig.gravityScale;
             }
