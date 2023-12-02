@@ -761,11 +761,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1251487892}
   - component: {fileID: 1251487891}
-  - component: {fileID: 1251487890}
   - component: {fileID: 1251487893}
   - component: {fileID: 1251487894}
+  - component: {fileID: 1251487890}
   - component: {fileID: 1251487896}
-  - component: {fileID: 1251487895}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Player
@@ -870,7 +869,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 2
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -892,18 +891,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &1251487895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251487889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9447bc70df33b447d8795c97f734236e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1251487896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,9 +1046,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2034241581}
   - component: {fileID: 2034241580}
-  - component: {fileID: 2034241579}
   - component: {fileID: 2034241582}
   - component: {fileID: 2034241583}
+  - component: {fileID: 2034241579}
   - component: {fileID: 2034241584}
   m_Layer: 0
   m_Name: Circle (1)
@@ -1083,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  rig: {fileID: 0}
+  rig: {fileID: 2034241582}
 --- !u!212 &2034241580
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1166,7 +1153,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
