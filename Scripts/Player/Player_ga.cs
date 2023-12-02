@@ -1,3 +1,4 @@
+/*
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -115,39 +116,5 @@ public class Player_ga : MonoBehaviour
 
             GameFailed();
         }*/
-        else if (collision.CompareTag("Key"))
-        {
-            Debug.Log("Player gets a key");
 
-            Destroy(collision.gameObject);
-            Key.GetKey();
-        }
-        else if (collision.CompareTag("Door"))
-        {
-            if (Key.HasAllKeys())
-            {
-                Debug.Log("Player has all keys.");
 
-                GameCompleted();
-            }
-            else
-            {
-                Debug.Log("Player doesn't have all keys.");
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Button"))
-        {
-            string number = collision.name.Replace("Button", "");
-            if (GameObject.Find("Barrier" + number))
-            {
-                Barrier = GameObject.Find("Barrier" + number).GetComponent<Barrier>();
-            }
-
-            Barrier.Enable();
-        }
-    }
-}
