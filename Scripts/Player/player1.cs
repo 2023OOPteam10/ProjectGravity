@@ -8,6 +8,8 @@ public class player1 : MonoBehaviour
 {
 
     public float speed_x;
+    public float speedAmount;
+    public float maxSpeed;
     public Rigidbody2D rig;
     public bool jumped = true;
     public Collision c;
@@ -35,11 +37,11 @@ public class player1 : MonoBehaviour
         }
         else if(Input.GetKey(KeyCode.A)){
             if(speed_x > 0) speed_x = 0;
-            else if(speed_x >= -20) speed_x -= (float)5.5f;
+            else if(speed_x >= -maxSpeed) speed_x -= speedAmount;
         }
         else if(Input.GetKey(KeyCode.D)){
             if(speed_x < 0) speed_x = 0;
-            if(speed_x <= 20) speed_x += (float)5.5f;
+            if(speed_x <= maxSpeed) speed_x += speedAmount;
         }
         else{
             speed_x = 0;

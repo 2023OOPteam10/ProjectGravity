@@ -13,12 +13,6 @@ public class Key : MonoBehaviour
         cnt_key = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static void GetKey()
     {
         cnt_key++;

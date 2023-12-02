@@ -109,12 +109,12 @@ public class Player_ga : MonoBehaviour
             
             Barrier.Disable();
         }
-        else if (collision.CompareTag("DeadZone"))
+        /*else if (collision.CompareTag("DeadZone"))
         {
             Debug.Log("Player enters a " + collision.name);
 
             GameFailed();
-        }
+        }*/
         else if (collision.CompareTag("Key"))
         {
             Debug.Log("Player gets a key");
