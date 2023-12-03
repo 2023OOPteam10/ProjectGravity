@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speedAmount: 1
-  maxSpeed: 5
+  speedAmount: 0.3
+  maxSpeed: 3
   rig: {fileID: 6815845972354959603}
   jumped: 0
 --- !u!114 &6815845972354959614
