@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    const int MAX_GREEN_GEM_SCORE = 3;    // the total number of existing gems
-    const int MAX_BLUE_GEM_SCORE = 3;    // the total number of existing gems
-    const int MAX_KEY_SCORE = 3;    // the total number of existing keys
-    const float TIME_LIMIT = 10.0f;    // the time limit of this game
+    public int MAX_GREEN_GEM_SCORE;    // the total number of existing gems
+    public int MAX_BLUE_GEM_SCORE;    // the total number of existing gems
+    public int MAX_KEY_SCORE;    // the total number of existing keys
+    public float TIME_LIMIT;    // the time limit of this game
 
     float elapsedTime;   // time elapsed from start time
     static int finalScore;  // the final score of this game.
