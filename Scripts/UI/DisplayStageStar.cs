@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,7 +33,7 @@ public class DisplayStageStar : MonoBehaviour
         int stage3StarN = OutgameManager.instance.GetStageStarNum(3);
 
         for(int i = 0; i < stage1StarN; i++) stage1Star[i].color = Color.white;
-        for(int i = 0; i < stage2StarN; i++) stage1Star[i].color = Color.white;
-        for(int i = 0; i < stage3StarN; i++) stage1Star[i].color = Color.white;
+        for(int i = 0; i < stage2StarN; i++) stage2Star[i].color = Color.white;
+        for(int i = 0; i < stage3StarN; i++) stage3Star[i].color = Color.white;
     }
 }

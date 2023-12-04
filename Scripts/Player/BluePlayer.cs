@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Rider.Unity.Editor;
-using Unity.Mathematics;
-using UnityEditor;
 using UnityEngine;
 
 public class BluePlayer : MonoBehaviour
