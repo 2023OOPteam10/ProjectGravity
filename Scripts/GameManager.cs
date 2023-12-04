@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
+        if (Time.timeScale == 0) Time.timeScale = 1;
         elapsedTime = 0.0f;
 
         /*
