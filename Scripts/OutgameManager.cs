@@ -4,10 +4,10 @@ public class OutgameManager : MonoBehaviour
 {
     public static OutgameManager instance = null; //SingleTon Instance
 
-    private int stage1Star;
-    private int stage2Star;
-    private int stage3Star;
-    private int stageNum;
+    [SerializeField]private int stage1Star;
+    [SerializeField]private int stage2Star;
+    [SerializeField]private int stage3Star;
+    [SerializeField]private static int stageNum;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class OutgameManager : MonoBehaviour
         }
         else
         {
-            if (instance != this) 
+            if (instance != this)
                 Destroy(this.gameObject);
         }
     }
@@ -54,8 +54,19 @@ public class OutgameManager : MonoBehaviour
         return star;
     }
 
-    public void SetStageNum(int n)
+    public static void SetStage1()
     {
-        stageNum = n;
+        stageNum = 1;
+        Debug.Log("1스테이지");
+    }
+    public static void SetStage2()
+    {
+        stageNum = 2;
+        Debug.Log("2스테이지");
+    }
+    public static void SetStage3()
+    {
+        stageNum = 3;
+        Debug.Log("3스테이지");
     }
 }

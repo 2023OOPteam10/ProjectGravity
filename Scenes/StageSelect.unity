@@ -305,9 +305,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 600011994}
-        m_TargetAssemblyTypeName: OutgameManager, Assembly-CSharp
-        m_MethodName: SetStageNum
+      - m_Target: {fileID: 324640427}
+        m_TargetAssemblyTypeName: DisplayStageStar, Assembly-CSharp
+        m_MethodName: SetStageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1173,6 +1173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99570f7f75ac6c4cbfe0df71febf439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage1Star: 0
+  stage2Star: 0
+  stage3Star: 0
 --- !u!4 &600011995
 Transform:
   m_ObjectHideFlags: 0
@@ -1517,9 +1520,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 600011994}
-        m_TargetAssemblyTypeName: OutgameManager, Assembly-CSharp
-        m_MethodName: SetStageNum
+      - m_Target: {fileID: 324640427}
+        m_TargetAssemblyTypeName: DisplayStageStar, Assembly-CSharp
+        m_MethodName: SetStageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2090,9 +2093,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 600011994}
-        m_TargetAssemblyTypeName: OutgameManager, Assembly-CSharp
-        m_MethodName: SetStageNum
+      - m_Target: {fileID: 324640427}
+        m_TargetAssemblyTypeName: DisplayStageStar, Assembly-CSharp
+        m_MethodName: SetStageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -36,4 +36,11 @@ public class DisplayStageStar : MonoBehaviour
         for(int i = 0; i < stage2StarN; i++) stage2Star[i].color = Color.white;
         for(int i = 0; i < stage3StarN; i++) stage3Star[i].color = Color.white;
     }
+
+    public void SetStageNumber(int n)
+    {
+        if (n == 1) OutgameManager.SetStage1();
+        else if (n == 2) OutgameManager.SetStage2();
+        else if (n == 3) OutgameManager.SetStage3();
+    }
 }
