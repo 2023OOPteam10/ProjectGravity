@@ -15,13 +15,13 @@ public class BluePlayer : MonoBehaviour
     public bool jumped = true;
     SpriteRenderer spriteRenderer;
     Animator animator;
-    GameManager gm;
     bool isDying;
+    [SerializeField] Pause pause;
+    [SerializeField] GameObject failCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -80,7 +80,8 @@ public class BluePlayer : MonoBehaviour
 
     private void Disappear()
     {
-        gm.IncreaseDeadCnt();
+        pause.PauseGame();
+        failCanvas.SetActive(true);
         gameObject.SetActive(false);
     }
 }
