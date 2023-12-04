@@ -12,10 +12,12 @@ public class GreenPlayer : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
     bool isDying;
+    GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -72,6 +74,7 @@ public class GreenPlayer : MonoBehaviour
 
     private void Disappear()
     {
+        gm.IncreaseDeadCnt();
         gameObject.SetActive(false);
     }
 }

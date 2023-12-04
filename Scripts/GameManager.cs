@@ -23,7 +23,11 @@ public class GameManager : MonoBehaviour
 
     public static bool isDoorOpened;   // if all the keys are collected, the final door will be opened.
 
+    private int playerDeadCount;
+
     [SerializeField] Timer timer;
+
+    [SerializeField] GameObject failCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -78,5 +82,16 @@ public class GameManager : MonoBehaviour
     public static int GetFinalScore()
     {
         return finalScore;
+    }
+
+    public void IncreaseDeadCnt()
+    {
+        playerDeadCount++;
+        if(playerDeadCount > 1)
+        {
+            Pause pause = GetComponent<Pause>();
+            pause.PauseGame();
+            failCanvas.SetActive(true);
+        }
     }
 }

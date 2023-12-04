@@ -15,11 +15,13 @@ public class BluePlayer : MonoBehaviour
     public bool jumped = true;
     SpriteRenderer spriteRenderer;
     Animator animator;
+    GameManager gm;
     bool isDying;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -73,11 +75,12 @@ public class BluePlayer : MonoBehaviour
     {
         isDying = true;
         animator.SetTrigger("Die");
-        Invoke("Disappear", 1.239f);    
+        Invoke("Disappear", 1.239f);
     }
 
     private void Disappear()
     {
+        gm.IncreaseDeadCnt();
         gameObject.SetActive(false);
     }
 }
