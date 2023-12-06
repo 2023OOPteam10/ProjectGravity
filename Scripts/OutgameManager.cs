@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class OutgameManager : MonoBehaviour
+public class OutgameManager : MonoBehaviour //manage all stages' game score information
 {
     public static OutgameManager instance = null; //SingleTon Instance
 
-    [SerializeField]private int stage1Star;
-    [SerializeField]private int stage2Star;
-    [SerializeField]private int stage3Star;
-    [SerializeField]private static int stageNum;
+    [SerializeField] int stage1Star;
+    [SerializeField] int stage2Star;
+    [SerializeField] int stage3Star;
+    [SerializeField] static int stageNum;
 
     private void Awake()
     {

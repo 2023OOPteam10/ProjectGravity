@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pause : MonoBehaviour
+public class Pause : MonoBehaviour //Pause game when game fail / clear / click pause button
 {
     public void PauseGame()
     {

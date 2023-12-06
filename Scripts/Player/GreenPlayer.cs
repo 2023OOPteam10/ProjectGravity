@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class GreenPlayer : MonoBehaviour
 {
-    public float speed_x;
-    public float jumpAmount;
-    public float speedAmount;
-    public float maxSpeed;
-    public Rigidbody2D rig;
+    [SerializeField] float jumpAmount;
+    [SerializeField] float speedAmount;
+    [SerializeField] float maxSpeed;
+    Rigidbody2D rig;
+    float speed_x;
     SpriteRenderer spriteRenderer;
     Animator animator;
     bool isDying;

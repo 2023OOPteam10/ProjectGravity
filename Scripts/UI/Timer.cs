@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class Timer : MonoBehaviour //used in Ingame timer UI
 {
     [SerializeField] TextMeshProUGUI timeUI;
 

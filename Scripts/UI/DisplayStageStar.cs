@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayStageStar : MonoBehaviour
+public class DisplayStageStar : MonoBehaviour //used in StageSelect Scene for display all stages' star state
 {
     [SerializeField] Color uncollectedColor;
 

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowResult : MonoBehaviour
+public class ShowResult : MonoBehaviour //When game is cleared, this script is used in ClearPopUp for display star by final score.
 {
     [SerializeField] Color uncollectedStarColor;
     [SerializeField] List<Image> stars;

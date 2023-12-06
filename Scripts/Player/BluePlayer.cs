@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class BluePlayer : MonoBehaviour
 {
-
-    public float speed_x;
-    public float speedAmount;
-    public float maxSpeed;
-    public Rigidbody2D rig;
-    public bool jumped = true;
+    [SerializeField] float speedAmount;
+    [SerializeField] float maxSpeed;
+    Rigidbody2D rig;
+    float speed_x;
     SpriteRenderer spriteRenderer;
     Animator animator;
     bool isDying;

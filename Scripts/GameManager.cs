@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour//manage main states of all game score in InGame and calculate final score by the state.
 {
-    public int MAX_GREEN_GEM_SCORE;    // the total number of existing gems
-    public int MAX_BLUE_GEM_SCORE;    // the total number of existing gems
-    public int MAX_KEY_SCORE;    // the total number of existing keys
-    public float TIME_LIMIT;    // the time limit of this game
+    [SerializeField] int MAX_GREEN_GEM_SCORE;    // the total number of existing gems
+    [SerializeField] int MAX_BLUE_GEM_SCORE;    // the total number of existing gems
+    [SerializeField] int MAX_KEY_SCORE;    // the total number of existing keys
+    [SerializeField] float TIME_LIMIT;    // the time limit of this game
 
     float elapsedTime;   // time elapsed from start time
     static int finalScore;  // the final score of this game.

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key : MonoBehaviour 
 {   
     public void OnTriggerEnter2D(Collider2D Collision)
     {
