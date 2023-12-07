@@ -4,7 +4,7 @@ public class BluePlayer : MonoBehaviour
 {
     [SerializeField] float speedAmount;
     [SerializeField] float maxSpeed;
-    Rigidbody2D rig;
+    [SerializeField] Rigidbody2D rig;
     float speed_x;
     SpriteRenderer spriteRenderer;
     Animator animator;
@@ -15,7 +15,6 @@ public class BluePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         speed_x = 0;
